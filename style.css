@@ -398,6 +398,12 @@ input:checked + .slider:before {
   max-height: 200px;
 }
 
+.job_icon {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
 @media screen and (max-width: 576px) {
   .w-sm {
     max-width: 576px;
