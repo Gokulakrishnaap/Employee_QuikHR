@@ -221,6 +221,35 @@ main {
   color: #fff;
 }
 
+/* Dropdown  */
+.dropdown_icon {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 170px;
+  margin-top: 20px;
+  padding: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown_content li {
+  list-style: none;
+  padding: 5px;
+}
+
+.dropdown_content i {
+  margin-right: 5px;
+}
+
 .contact_title {
   background-color: #e8e8e8;
   padding: 8px;
