@@ -1,0 +1,852 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Quik HR</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h3>My Space</h3>
+      </div>
+    </header>
+
+    <main>
+      <section class="tabs_container w-sm w-md w-lg w-xl w-xxl">
+        <ul class="tabs_list">
+          <li class="tab_item active" onclick="openMainTab(event, 'personal')">
+            Personal
+          </li>
+          <li class="tab_item" onclick="openMainTab(event, 'team')">Team</li>
+          <li class="tab_item" onclick="openMainTab(event, 'job')">Job</li>
+          <li class="tab_item" onclick="openMainTab(event, 'training')">
+            Training
+          </li>
+          <li class="tab_item" onclick="openMainTab(event, 'assets')">
+            Assets
+          </li>
+          <li class="tab_item" onclick="openMainTab(event, 'notes')">Notes</li>
+        </ul>
+        <div class="tab_customize_btn">Customize Tabs</div>
+      </section>
+
+      <section id="personal" class="card_container w-sm w-md w-lg w-xl w-xxl">
+        <div class="card">
+          <div class="card_body">
+            <div class="card_tabs_list">
+              <button
+                class="btn card_tab_item tab_active"
+                onclick="openTab(event, 'basicInfo')"
+              >
+                Basic Info
+              </button>
+              <button
+                class="btn card_tab_item"
+                onclick="openTab(event, 'contacts')"
+              >
+                Contacts
+              </button>
+              <button
+                class="btn card_tab_item"
+                onclick="openTab(event, 'family')"
+              >
+                Family
+              </button>
+              <button
+                class="btn card_tab_item"
+                onclick="openTab(event, 'education')"
+              >
+                Education
+              </button>
+              <button
+                class="btn card_tab_item"
+                onclick="openTab(event, 'workExperience')"
+              >
+                Work Experience
+              </button>
+              <button
+                class="btn card_tab_item"
+                onclick="openTab(event, 'documents')"
+              >
+                Documents
+              </button>
+              <button
+                class="btn card_tab_item"
+                onclick="openTab(event, 'benefits')"
+              >
+                Benefits
+              </button>
+              <button
+                class="btn card_tab_item"
+                onclick="openTab(event, 'healthRecord')"
+              >
+                Health Record
+              </button>
+              <button
+                class="btn card_tab_item"
+                onclick="openTab(event, 'travel')"
+              >
+                Travel
+              </button>
+            </div>
+
+            <!-- Basic Info Tab -->
+            <div id="basicInfo" class="card_form_group">
+              <div class="row">
+                <div class="col-8">
+                  <div class="row">
+                    <div class="col-3 form-col">
+                      <label class="form-label">Employee ID</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <div class="col-3 form-col">
+                      <label class="form-label">Preferred Name</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-col col-3">
+                      <label class="form-label">First Name</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <div class="form-col col-3">
+                      <label class="form-label">Middle Name </label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <div class="form-col col-3">
+                      <label class="form-label">Last Name</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-col col-3">
+                      <label class="form-label">Date of Birth</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <div class="form-col col-3">
+                      <label class="form-label">Age</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <div class="form-col col-3">
+                      <label class="form-label">Nationality</label>
+                      <select class="form-select">
+                        <option value=""></option>
+                        <option value="Ind">Indian</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-col col-3">
+                      <label class="form-label">Gender</label>
+                      <select class="form-select">
+                        <option value=""></option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                      </select>
+                    </div>
+                    <div class="form-col col-3">
+                      <label class="form-label">Martial Status</label>
+                      <select class="form-select">
+                        <option value=""></option>
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                      </select>
+                    </div>
+                    <div class="form-col col-3">
+                      <label class="form-label">Date of Marriage</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 avatar_img_section">
+                  <div class="avatar_img_container">
+                    <img
+                      src="./avatar_picture.jpg"
+                      class="profile_img"
+                      alt="profile"
+                    />
+                  </div>
+                  <div class="avatar_upload_btn_section">
+                    <button class="btn avatar_upload_btn">Upload</button>
+                    <span>Supported only JPG, PNG, SVG</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-col col-3">
+                  <label class="form-label">T-Shirt Size</label>
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Contacts Tab -->
+            <div id="contacts" class="card_form_group">
+              <div class="row">
+                <div class="row contact_title">
+                  <span>Current Address</span>
+                </div>
+                <div class="row">
+                  <div class="col-6 form-col">
+                    <label class="form-label">Address Line 1</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-5 form-col">
+                    <label class="form-label">Address Line 2</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3 form-col">
+                    <label class="form-label">Country</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-3 form-col">
+                    <label class="form-label">State</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-2 form-col">
+                    <label class="form-label">City</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-2 form-col">
+                    <label class="form-label">Zip Code</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="row contact_title">
+                  <span>Permanent Address</span>
+                </div>
+                <div class="row">
+                  <div class="col-6 form-col">
+                    <label class="form-label">Address Line 1</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-5 form-col">
+                    <label class="form-label">Address Line 2</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3 form-col">
+                    <label class="form-label">Country</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-3 form-col">
+                    <label class="form-label">State</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-2 form-col">
+                    <label class="form-label">City</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-2 form-col">
+                    <label class="form-label">Zip Code</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="row contact_title">
+                  <span>Contact Details</span>
+                </div>
+                <div class="row">
+                  <div class="col-3 form-col">
+                    <label class="form-label">Mobile</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-3 form-col">
+                    <label class="form-label">Work</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-2 form-col">
+                    <label class="form-label">Work Email</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-2 form-col">
+                    <label class="form-label">Personal Email</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="row contact_title">
+                  <span>Emergency Contact</span>
+                </div>
+                <div class="row">
+                  <div class="col-3 form-col">
+                    <label class="form-label">Contact Name</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-3 form-col">
+                    <label class="form-label">Contact Number</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-3 form-col">
+                    <label class="form-label">Relationship</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="family" class="card_form_group">
+              <div class="row">
+                <table class="content_table">
+                  <thead>
+                    <tr>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Relationship</th>
+                      <th>Date of Birth</th>
+                      <th>Education</th>
+                      <th>Occupation</th>
+                      <th>Dependent</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td>
+                        <div class="toggle">
+                          <p>No</p>
+                          <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                          </label>
+                          <p>Yes</p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="checkBox">
+                          <input type="checkbox" />
+                          <input type="checkbox" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Steve</td>
+                      <td>Jobs</td>
+                      <td>Brother</td>
+                      <td>Feb 24th</td>
+                      <td>B.E</td>
+                      <td>Engineer</td>
+                      <td>No</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div id="education" class="card_form_group">
+              <div class="row">
+                <table class="content_table">
+                  <thead>
+                    <tr>
+                      <th>Degree</th>
+                      <th>Major</th>
+                      <th>University</th>
+                      <th>Year</th>
+                      <th>CGPA</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td>
+                        <div class="checkBox">
+                          <input type="checkbox" />
+                          <input type="checkbox" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>B.Tech</td>
+                      <td>IT</td>
+                      <td>Anna University</td>
+                      <td>2024</td>
+                      <td>75</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="row">
+                <div class="row contact_title">
+                  <span>Certification</span>
+                </div>
+                <table class="content_table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Issued By</th>
+                      <th>Issued Date</th>
+                      <th>Expiry Date</th>
+                      <th>Additional Information</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td>
+                        <div class="checkBox">
+                          <input type="checkbox" />
+                          <input type="checkbox" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Scrum Master</td>
+                      <td>Project Management</td>
+                      <td>Mar 25th 2024</td>
+                      <td>Mar 25th 2026</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div id="workExperience" class="card_form_group">
+              <div class="row">
+                <table class="content_table">
+                  <thead>
+                    <tr>
+                      <th>Organization</th>
+                      <th>Location</th>
+                      <th>Job Title</th>
+                      <th>Start Date</th>
+                      <th>End Date</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td>
+                        <div class="checkBox">
+                          <input type="checkbox" />
+                          <input type="checkbox" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>IT Company</td>
+                      <td>Chennai</td>
+                      <td>Senior Developer</td>
+                      <td>Mar 25th, 2020</td>
+                      <td>Mar 25th, 2022</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div id="documents" class="card_form_group">
+              <div class="document">
+                <div class="doc_left">
+                  <div class="row">
+                    <div class="col-6 form-col">
+                      <label class="form-label">Document Type</label>
+                      <select class="form-select">
+                        <option value=""></option>
+                        <option value="pdf">PDF</option>
+                      </select>
+                      <button class="upload">Upload Files</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="doc_right">
+                  <ul class="accordion">
+                    <li>
+                      <label for="first">Education <span>+</span></label>
+                      <input type="radio" name="accordion" id="first" checked />
+                      <div class="acc_content">
+                        <p>
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and
+                          scrambled it to make a type specimen book. It has
+                          survived not only five centuries, but also the leap
+                          into electronic typesetting, remaining essentially
+                          unchanged. It was popularised in the 1960s with the
+                          release of Letraset sheets containing Lorem Ipsum
+                          passages, and more recently with desktop publishing
+                          software like Aldus PageMaker including versions of
+                          Lorem Ipsum. Lorem Ipsum is simply dummy text of the
+                          printing and typesetting industry. Lorem Ipsum has
+                          been the industry's standard dummy text ever since the
+                          1500s.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <label for="second">Employment <span>+</span></label>
+                      <input type="radio" name="accordion" id="second" />
+                      <div class="acc_content"><p>Hello World</p></div>
+                    </li>
+                    <li>
+                      <label for="third"
+                        >Signed Offer Letter <span>+</span></label
+                      >
+                      <input type="radio" name="accordion" id="third" />
+                      <div class="acc_content"><p>Hello World</p></div>
+                    </li>
+                    <li>
+                      <label for="fourth">Resume <span>+</span></label>
+                      <input type="radio" name="accordion" id="fourth" />
+                      <div class="acc_content"><p>Hello World</p></div>
+                    </li>
+                    <li>
+                      <label for="fifth">Identity Proof <span>+</span></label>
+                      <input type="radio" name="accordion" id="fifth" />
+                      <div class="acc_content"><p>Hello World</p></div>
+                    </li>
+                    <li>
+                      <label for="sixth">Agreements <span>+</span></label>
+                      <input type="radio" name="accordion" id="sixth" />
+                      <div class="acc_content"><p>Hello World</p></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div id="benefits" class="card_form_group">
+              <div class="row">
+                <div class="row contact_title">
+                  <span>Summary</span>
+                </div>
+                <table class="content_table">
+                  <thead>
+                    <tr>
+                      <th>Benefits</th>
+                      <th>Effective</th>
+                      <th>Coverage</th>
+                      <th>Frequency</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Health Insurance DD1</td>
+                      <td>Employee + Spouse</td>
+                      <td>$0.0</td>
+                      <td>Jan 10th 2022 - Mar 25th 2026</td>
+                      <td>Eligible</td>
+                    </tr>
+                    <tr>
+                      <td>Dental Insurance D01</td>
+                      <td>Employee</td>
+                      <td>$100</td>
+                      <td>Jan 10th 2022 - Mar 25th 2026</td>
+                      <td>N/A</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="row">
+                <div class="row contact_title">
+                  <span>Dependents</span>
+                </div>
+                <table class="content_table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Relationship</th>
+                      <th>Gender</th>
+                      <th>ID Number</th>
+                      <th>Date of Birth</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Lonard</td>
+                      <td>Children</td>
+                      <td>Male</td>
+                      <td>12345</td>
+                      <td>Feb 10th 1995</td>
+                      <td>
+                        <div class="checkBox">
+                          <input type="checkbox" />
+                          <input type="checkbox" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Stephen</td>
+                      <td>Father</td>
+                      <td>Male</td>
+                      <td>12378</td>
+                      <td>Feb 20th 1995</td>
+                      <td>
+                        <div class="checkBox">
+                          <input type="checkbox" />
+                          <input type="checkbox" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="row">
+                <div class="row contact_title">
+                  <span>History</span>
+                </div>
+              </div>
+            </div>
+
+            <div id="healthRecord" class="card_form_group">
+              <div class="row">
+                <div class="col-3 form-col">
+                  <label class="form-label">Blood Group</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-2 form-col">
+                  <label class="form-label">Blood Donor</label>
+                  <div class="toggle">
+                    <p>No</p>
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <span class="slider round"></span>
+                    </label>
+                    <p>Yes</p>
+                  </div>
+                </div>
+                <div class="col-2 form-col">
+                  <label class="form-label">Allergy Insurance</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-2 form-col">
+                  <label class="form-label">Pre Existing Illness</label>
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="row contact_title">
+                  <span>Vaccination Overview</span>
+                </div>
+                <table class="content_table">
+                  <thead>
+                    <tr>
+                      <th>Vaccination Name</th>
+                      <th>Date of Dose</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td>
+                        <div class="checkBox">
+                          <input type="checkbox" />
+                          <input type="checkbox" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Corona</td>
+                      <td>Jan 25th 2020</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div id="travel" class="card_form_group">
+              <div class="row">
+                <div class="col-3 form-col">
+                  <label class="form-label">Passport Number</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-3 form-col">
+                  <label class="form-label">Issued By</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-2 form-col">
+                  <label class="form-label">Date of Issue</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-2 form-col">
+                  <label class="form-label">Date of Expiry</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-2 form-col">
+                  <label class="form-label">First Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-2 form-col">
+                  <label class="form-label">Middle Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-2 form-col">
+                  <label class="form-label">Last Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="row contact_title">
+                  <span>Visa Information</span>
+                </div>
+                <table class="content_table">
+                  <thead>
+                    <tr>
+                      <th>Visa Number</th>
+                      <th>Issued Date</th>
+                      <th>Place of Issue</th>
+                      <th>Expiry Date</th>
+                      <th>Notes</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td><input type="text" class="table_input_row" /></td>
+                      <td>
+                        <div class="checkBox">
+                          <input type="checkbox" />
+                          <input type="checkbox" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>56789345</td>
+                      <td>Jan 25th 2020</td>
+                      <td>Delhi</td>
+                      <td>Jan 25th 2020</td>
+                      <td>Notes Visa</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="card_footer">
+            <div class="footer_btn_container">
+              <button class="btn btn-secondary">Edit</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="card_container">
+        <div class="card">
+          <div class="card_body">
+            <h2>Team</h2>
+          </div>
+        </div>
+      </section>
+
+      <section id="job" class="card_container">
+        <div class="card">
+          <div class="card_body">
+            <h2>Job</h2>
+          </div>
+        </div>
+      </section>
+
+      <section id="training" class="card_container">
+        <div class="card">
+          <div class="card_body">
+            <h2>Training</h2>
+          </div>
+        </div>
+      </section>
+
+      <section id="assets" class="card_container">
+        <div class="card">
+          <div class="card_body">
+            <h2>Assets</h2>
+          </div>
+        </div>
+      </section>
+
+      <section id="notes" class="card_container">
+        <div class="card">
+          <div class="card_body">
+            <h2>Notes</h2>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Main Tab
+      function openMainTab(evt, tabName) {
+        var i, tabcontent, tablink;
+        tabcontent = document.getElementsByClassName("card_container");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablink = document.getElementsByClassName("tab_item");
+        for (i = 0; i < tablink.length; i++) {
+          tablink[i].className = tablink[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // Personal Tab
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablink;
+        tabcontent = document.getElementsByClassName("card_form_group");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablink = document.getElementsByClassName("card_tab_item");
+        for (i = 0; i < tablink.length; i++) {
+          tablink[i].className = tablink[i].className.replace(
+            " tab_active",
+            ""
+          );
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " tab_active";
+      }
+    </script>
+  </body>
+</html>
