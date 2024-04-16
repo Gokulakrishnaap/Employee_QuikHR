@@ -41,6 +41,7 @@
         <div class="tab_customize_btn">Customize Tabs</div>
       </section>
 
+      <!-- Personal Tab  -->
       <section id="personal" class="card_container w-sm w-md w-lg w-xl w-xxl">
         <div class="card">
           <div class="card_body">
@@ -303,6 +304,7 @@
               </div>
             </div>
 
+            <!-- Family Tab  -->
             <div id="family" class="card_form_group">
               <div class="row">
                 <table class="content_table">
@@ -358,6 +360,7 @@
               </div>
             </div>
 
+            <!-- Education Tab  -->
             <div id="education" class="card_form_group">
               <div class="row">
                 <table class="content_table">
@@ -439,6 +442,7 @@
               </div>
             </div>
 
+            <!-- Work Experience Tab  -->
             <div id="workExperience" class="card_form_group">
               <div class="row">
                 <table class="content_table">
@@ -479,6 +483,7 @@
               </div>
             </div>
 
+            <!-- Documents Tab  -->
             <div id="documents" class="card_form_group">
               <div class="document">
                 <div class="doc_left">
@@ -547,6 +552,7 @@
               </div>
             </div>
 
+            <!-- Benefits Tab  -->
             <div id="benefits" class="card_form_group">
               <div class="row">
                 <div class="row contact_title">
@@ -634,6 +640,7 @@
               </div>
             </div>
 
+            <!-- Health Record Tab  -->
             <div id="healthRecord" class="card_form_group">
               <div class="row">
                 <div class="col-3 form-col">
@@ -693,6 +700,7 @@
               </div>
             </div>
 
+            <!-- Travel Tab  -->
             <div id="travel" class="card_form_group">
               <div class="row">
                 <div class="col-3 form-col">
@@ -774,14 +782,21 @@
         </div>
       </section>
 
+      <!-- Team Tab  -->
       <section id="team" class="card_container">
         <div class="card">
           <div class="card_body">
             <h2>Team</h2>
           </div>
+          <div class="card_footer">
+            <div class="footer_btn_container">
+              <button class="btn btn-secondary">Edit</button>
+            </div>
+          </div>
         </div>
       </section>
 
+      <!-- Job Tab  -->
       <section id="job" class="card_container">
         <div class="card">
           <div class="card_body">
@@ -837,9 +852,15 @@
               </table>
             </div>
           </div>
+          <div class="card_footer">
+            <div class="footer_btn_container">
+              <button class="btn btn-secondary">Edit</button>
+            </div>
+          </div>
         </div>
       </section>
 
+      <!-- Training Tab  -->
       <section id="training" class="card_container">
         <div class="card">
           <div class="card_body">
@@ -879,21 +900,123 @@
               </table>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="assets" class="card_container">
-        <div class="card">
-          <div class="card_body">
-            <h2>Assets</h2>
+          <div class="card_footer">
+            <div class="footer_btn_container">
+              <button class="btn btn-secondary">Edit</button>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- Assets Tab  -->
+      <section id="assets" class="card_container">
+        <div class="card">
+          <div class="card_body">
+            <div class="row">
+              <div class="row job_icon">
+                <i class="fa fa-solid fa fa-bars"></i>
+              </div>
+              <table class="content_table">
+                <thead>
+                  <tr>
+                    <th>Device</th>
+                    <th>Brand name</th>
+                    <th>Serial Number</th>
+                    <th>Configuration</th>
+                    <th>Assigned On</th>
+                    <th>Returned On</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="text" class="table_input_row" /></td>
+                    <td><input type="text" class="table_input_row" /></td>
+                    <td><input type="text" class="table_input_row" /></td>
+                    <td><input type="text" class="table_input_row" /></td>
+                    <td><input type="text" class="table_input_row" /></td>
+                    <td><input type="text" class="table_input_row" /></td>
+                    <td><input type="text" class="table_input_row" /></td>
+                    <td>
+                      <div class="checkBox">
+                        <input type="checkbox" />
+                        <input type="checkbox" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Laptop</td>
+                    <td>Mac Book Pro</td>
+                    <td>Mac 12345</td>
+                    <td>8GB RAM(DDR)</td>
+                    <td>Mar 3rd, 2024</td>
+                    <td>Mar 10th, 2024</td>
+                    <td>Completed</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card_footer">
+            <div class="footer_btn_container">
+              <button class="btn btn-secondary">Edit</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Notes Tab  -->
       <section id="notes" class="card_container">
         <div class="card">
           <div class="card_body">
-            <h2>Notes</h2>
+            <div class="notes_tab">
+              <div class="notes_top">
+                <textarea class="notes_ta" placeholder="Add Note..."></textarea>
+                <div class="notes_button">
+                  <button class="btn btn-secondary">Add</button>
+                </div>
+              </div>
+              <div class="notes_bottom">
+                <div class="row job_icon">
+                  <i class="fa fa-solid fa fa-bars"></i>
+                </div>
+                <ul class="notes_accordion">
+                  <li>
+                    <label for="first" class="notes_label">
+                      Added by Steve, On Jan 01, 2024
+                      <i class="fa fa-solid fa fa-angle-down"></i
+                    ></label>
+                    <input type="radio" name="accordion" id="first" checked />
+                    <div class="acc_content">
+                      <p>Hello World</p>
+                    </div>
+                  </li>
+                  <li>
+                    <label for="second" class="notes_label">
+                      Added by Mike, On Jan 02, 2024
+                      <i class="fa fa-solid fa fa-angle-down"></i
+                    ></label>
+                    <input type="radio" name="accordion" id="second" />
+                    <div class="acc_content"><p>Hello World</p></div>
+                  </li>
+                  <li>
+                    <label for="third" class="notes_label">
+                      Added by Sam, On Jan 03, 2024
+                      <i class="fa fa-solid fa fa-angle-down"></i
+                    ></label>
+                    <input type="radio" name="accordion" id="third" />
+                    <div class="acc_content"><p>Hello World</p></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card_footer">
+            <div class="footer_btn_container">
+              <button class="btn btn-secondary">Edit</button>
+            </div>
           </div>
         </div>
       </section>

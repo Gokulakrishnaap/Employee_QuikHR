@@ -404,6 +404,66 @@ input:checked + .slider:before {
   padding: 20px;
 }
 
+.notes_tab {
+  padding: 20px;
+}
+
+.notes_top {
+  display: flex;
+  flex-direction: column;
+}
+
+.notes_ta {
+  padding: 10px;
+  min-height: 100px;
+}
+
+.notes_button {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
+}
+
+.notes_accordion {
+  width: 700px;
+}
+
+.notes_accordion li {
+  list-style: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0.5px solid gray;
+}
+
+.notes_accordion li label {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.notes_accordion label + input[type="radio"] {
+  display: none;
+}
+
+.notes_accordion .acc_content {
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.notes_accordion label + input[type="radio"]:checked + .acc_content {
+  max-height: 200px;
+}
+
 @media screen and (max-width: 576px) {
   .w-sm {
     max-width: 576px;
