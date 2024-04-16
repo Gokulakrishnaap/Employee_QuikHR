@@ -42,7 +42,10 @@
       </section>
 
       <!-- Personal Tab  -->
-      <section id="personal" class="card_container w-sm w-md w-lg w-xl w-xxl">
+      <section
+        id="personal"
+        class="card_container selected w-sm w-md w-lg w-xl w-xxl"
+      >
         <div class="card">
           <div class="card_body">
             <div class="card_tabs_list subTab">
@@ -121,7 +124,7 @@
             </div>
 
             <!-- Basic Info Tab -->
-            <div id="basicInfo" class="card_form_group">
+            <div id="basicInfo" class="card_form_group selected">
               <div class="row">
                 <div class="col-8">
                   <div class="row">
@@ -1117,6 +1120,16 @@
     </main>
 
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var tabContents = document.querySelectorAll(".card_container");
+
+        tabContents.forEach(function (tabContent) {
+          if (!tabContent.classList.contains("selected")) {
+            tabContent.style.display = "none";
+          }
+        });
+      });
+
       // Main Tab
       function openMainTab(evt, tabName) {
         var i, tabcontent, tablink;
@@ -1131,6 +1144,16 @@
         document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " active";
       }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var tabContents = document.querySelectorAll(".card_form_group");
+
+        tabContents.forEach(function (tabContent) {
+          if (!tabContent.classList.contains("selected")) {
+            tabContent.style.display = "none";
+          }
+        });
+      });
 
       // Personal Tab
       function openTab(evt, tabName) {
