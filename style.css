@@ -127,6 +127,7 @@ main {
 }
 
 .form-control {
+  font-family: "Montserrat", sans-serif;
   display: block;
   width: 100%;
   padding: 2px 3px;
@@ -138,6 +139,7 @@ main {
 }
 
 .form-select {
+  font-family: "Montserrat", sans-serif;
   display: block;
   width: 100%;
   padding: 4px 3px;
@@ -280,6 +282,7 @@ main {
 }
 
 .table_input_row {
+  font-family: "Montserrat", sans-serif;
   display: block;
   width: 80%;
   padding: 3px;
@@ -307,6 +310,7 @@ main {
 }
 
 .contact_table_input_row {
+  font-family: "Montserrat", sans-serif;
   display: block;
   min-width: 100%;
   padding: 3px;
