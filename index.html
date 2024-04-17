@@ -970,23 +970,33 @@
         <div class="card">
           <div class="card_body">
             <div class="row">
-              <div class="row dropdown_icon dropbtn">
-                <i
-                  class="fa fa-solid fa fa-bars"
-                  onclick="toggleDropdownTeam()"
-                ></i>
-                <div id="dropdownContentTeam" class="dropdown_content">
-                  <ul>
-                    <li><i class="fa fa-thin fa fa-upload"></i> Export</li>
-                    <li>
-                      <i class="fa fa-thin fa fa-download"></i>
-                      Import
-                    </li>
-                    <li>
-                      <i class="fa fa-regular fa fa-file"></i> Audit History
-                    </li>
-                    <li><i class="fa fa-thin fa fa-trash"></i> Delete</li>
-                  </ul>
+              <div class="team">
+                <div>
+                  <input
+                    type="text"
+                    class="team_search"
+                    placeholder="Employee Name"
+                  />
+                </div>
+                <div class="dropdown_icon dropbtn">
+                  <i class="fa fa-filter filtericon"></i>
+                  <i
+                    class="fa fa-solid fa fa-bars"
+                    onclick="toggleDropdownTeam()"
+                  ></i>
+                  <div id="dropdownContentTeam" class="dropdown_content">
+                    <ul>
+                      <li><i class="fa fa-thin fa fa-upload"></i> Export</li>
+                      <li>
+                        <i class="fa fa-thin fa fa-download"></i>
+                        Import
+                      </li>
+                      <li>
+                        <i class="fa fa-regular fa fa-file"></i> Audit History
+                      </li>
+                      <li><i class="fa fa-thin fa fa-trash"></i> Delete</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <table class="content_table">
@@ -1040,6 +1050,45 @@
                     <td>Thomas</td>
                     <td>(555)555-0101</td>
                     <td>john@test.net</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="team_table">
+                <tbody>
+                  <tr class="team_table_row">
+                    <td class="team_left">
+                      <div class="team_left_1"><span>30 Results</span></div>
+                      <div class="team_left_2">
+                        <p>
+                          Show :
+                          <span
+                            ><input type="number" class="team_left_2a"
+                          /></span>
+                        </p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="pagination">
+                        <a href="#">&laquo;</a>
+                        <a href="#">1</a>
+                        <a href="#" class="p_active">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">&raquo;</a>
+                      </div>
+                    </td>
+                    <td class="team_left">
+                      <div class="team_left_2">
+                        <p>
+                          Jump to :
+                          <span
+                            ><input type="number" class="team_left_2a"
+                          /></span>
+                        </p>
+                      </div>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -1258,19 +1307,35 @@
         <div class="card">
           <div class="card_body">
             <div class="row">
-              <div class="row job_icon">
-                <i class="fa fa-solid fa fa-bars"></i>
+              <div class="row dropdown_icon dropbtn">
+                <i
+                  class="fa fa-solid fa fa-bars"
+                  onclick="toggleDropdownAssets()"
+                ></i>
+                <div id="dropdownContentAssets" class="dropdown_content">
+                  <ul>
+                    <li><i class="fa fa-thin fa fa-upload"></i> Export</li>
+                    <li>
+                      <i class="fa fa-thin fa fa-download"></i>
+                      Import
+                    </li>
+                    <li>
+                      <i class="fa fa-regular fa fa-file"></i> Audit History
+                    </li>
+                    <li><i class="fa fa-thin fa fa-trash"></i> Delete</li>
+                  </ul>
+                </div>
               </div>
               <table class="content_table">
                 <thead>
                   <tr>
-                    <th>Device</th>
-                    <th>Brand name</th>
-                    <th>Serial Number</th>
-                    <th>Configuration</th>
-                    <th>Assigned On</th>
-                    <th>Returned On</th>
-                    <th>Status</th>
+                    <th>Device <i class="fa fa-sort"></i></th>
+                    <th>Brand name <i class="fa fa-sort"></i></th>
+                    <th>Serial Number <i class="fa fa-sort"></i></th>
+                    <th>Configuration <i class="fa fa-sort"></i></th>
+                    <th>Assigned On <i class="fa fa-sort"></i></th>
+                    <th>Returned On <i class="fa fa-sort"></i></th>
+                    <th>Status <i class="fa fa-sort"></i></th>
                     <th></th>
                   </tr>
                 </thead>
@@ -1329,29 +1394,47 @@
                 </div>
                 <ul class="notes_accordion">
                   <li>
-                    <label for="first" class="notes_label">
-                      Added by Steve, On Jan 01, 2024
-                      <i class="fa fa-solid fa fa-angle-down"></i
-                    ></label>
-                    <input type="radio" name="accordion" id="first" checked />
+                    <label for="one" class="notes_label">
+                      <p>
+                        <i class="fa fa-solid fa fa-angle-down"></i> Added by
+                        Steve, On Jan 01, 2024
+                      </p>
+                      <div>
+                        <i class="fa fa-solid fa fa-pencil"></i>
+                        <i class="fa fa-thin fa fa-trash"></i>
+                      </div>
+                    </label>
+                    <input type="radio" name="accordion" id="one" checked />
                     <div class="acc_content">
                       <p>Hello World</p>
                     </div>
                   </li>
                   <li>
-                    <label for="second" class="notes_label">
-                      Added by Mike, On Jan 02, 2024
-                      <i class="fa fa-solid fa fa-angle-down"></i
-                    ></label>
-                    <input type="radio" name="accordion" id="second" />
+                    <label for="two" class="notes_label">
+                      <p>
+                        <i class="fa fa-solid fa fa-angle-down"></i> Added by
+                        Steve, On Jan 01, 2024
+                      </p>
+                      <div>
+                        <i class="fa fa-solid fa fa-pencil"></i>
+                        <i class="fa fa-thin fa fa-trash"></i>
+                      </div>
+                    </label>
+                    <input type="radio" name="accordion" id="two" />
                     <div class="acc_content"><p>Hello World</p></div>
                   </li>
                   <li>
-                    <label for="third" class="notes_label">
-                      Added by Sam, On Jan 03, 2024
-                      <i class="fa fa-solid fa fa-angle-down"></i
-                    ></label>
-                    <input type="radio" name="accordion" id="third" />
+                    <label for="three" class="notes_label">
+                      <p>
+                        <i class="fa fa-solid fa fa-angle-down"></i> Added by
+                        Steve, On Jan 01, 2024
+                      </p>
+                      <div>
+                        <i class="fa fa-solid fa fa-pencil"></i>
+                        <i class="fa fa-thin fa fa-trash"></i>
+                      </div>
+                    </label>
+                    <input type="radio" name="accordion" id="three" />
                     <div class="acc_content"><p>Hello World</p></div>
                   </li>
                 </ul>
@@ -1452,6 +1535,15 @@
 
       function toggleDropdownTeam() {
         var dropdownContent = document.getElementById("dropdownContentTeam");
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      }
+
+      function toggleDropdownAssets() {
+        var dropdownContent = document.getElementById("dropdownContentAssets");
         if (dropdownContent.style.display === "block") {
           dropdownContent.style.display = "none";
         } else {
