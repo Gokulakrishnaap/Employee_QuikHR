@@ -341,7 +341,7 @@ main {
 }
 
 .filtericon {
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 /* Team Table  */
@@ -395,6 +395,10 @@ main {
 .pagination a.p_active {
   background-color: #ddd;
   border-radius: 5px;
+}
+
+.td_asset {
+  width: 120px;
 }
 
 /* Toggle */
@@ -558,6 +562,7 @@ input:checked + .slider:before {
 }
 
 .notes_ta {
+  font-family: "Montserrat", sans-serif;
   padding: 10px;
   min-height: 100px;
 }
